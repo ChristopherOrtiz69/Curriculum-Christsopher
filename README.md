@@ -36,6 +36,20 @@ curriculum/
 Tu sitio quedara disponible en:
 https://TU_USUARIO.github.io/TU_REPOSITORIO/
 
+## Si falla el deploy de Pages
+
+Si en GitHub Actions aparece un error como:
+HttpError: Not Found / Get Pages site failed
+
+hacer esto:
+
+1. Ve a Settings > Pages.
+2. En Build and deployment selecciona Source = GitHub Actions.
+3. Guarda los cambios.
+4. Re-ejecuta el workflow Deploy GitHub Pages.
+
+Nota: El workflow ya incluye enablement: true para intentar habilitar Pages automaticamente. Si tu organizacion o permisos lo bloquean, debes habilitarlo manualmente en Settings.
+
 ## Contacto en GitHub Pages
 
 GitHub Pages no ejecuta backend Node.js.

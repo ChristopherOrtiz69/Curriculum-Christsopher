@@ -18,5 +18,8 @@
     "express-rate-limit": "^7.4.1",
     "helmet": "^8.0.0",
     "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "pdf-parse": "^2.4.5"
   }
 }

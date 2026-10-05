@@ -94,31 +94,33 @@
       </div>
 
       <!-- Editor de código -->
-      <figure class="editor" aria-label="Fragmento de código de IAlvaco">
+      <figure class="editor" aria-label="Presentación de Christopher escrita como una clase de C#">
         <div class="editor-bar">
           <span class="dots"><i></i><i></i><i></i></span>
-          <span class="tab mono">AsistenteService.cs</span>
+          <span class="tab mono">Christopher.cs</span>
           <span class="tab tab-off mono">Program.cs</span>
         </div>
-        <pre class="code mono" id="code"><code><span class="ln"><span class="k">public async</span> <span class="t">Task</span>&lt;<span class="t">Respuesta</span>&gt; <span class="f">ResponderAsync</span>(<span class="t">Pregunta</span> p)</span>
+        <pre class="code mono" id="code"><code><span class="ln"><span class="c">// Sobre mí, compilado en C# · About me, compiled</span></span>
+<span class="ln"><span class="k">public sealed class</span> <span class="t">Christopher</span> : <span class="t">Developer</span></span>
 <span class="ln">{</span>
-<span class="ln">    <span class="c">// 1. Seguridad: permisos + cuota de tokens</span></span>
-<span class="ln">    <span class="k">await</span> _gate.<span class="f">ValidarAsync</span>(p.Usuario, p.Depto);</span>
+<span class="ln">    <span class="k">public string</span> FullName =&gt; <span class="s">"Christopher Iván Ortiz Villafañet"</span>;</span>
+<span class="ln">    <span class="k">public string</span> Role     =&gt; <span class="s">".NET · AI · Mobile Engineer"</span>;</span>
+<span class="ln">    <span class="k">public string</span> Base     =&gt; <span class="s">"CDMX, México"</span>;</span>
 <span class="ln"></span>
-<span class="ln">    <span class="c">// 2. Cache semantica (umbral 0.88)</span></span>
-<span class="ln">    <span class="k">if</span> (<span class="k">await</span> _cache.<span class="f">BuscarAsync</span>(p) <span class="k">is</span> { } hit)</span>
-<span class="ln">        <span class="k">return</span> hit;   <span class="c">// 0 tokens, &lt;1 s</span></span>
+<span class="ln">    <span class="k">public string</span>[] Stack =&gt;</span>
+<span class="ln">        [<span class="s">"C#"</span>, <span class="s">".NET 10"</span>, <span class="s">"Azure OpenAI"</span>, <span class="s">".NET MAUI"</span>, <span class="s">"SQL"</span>];</span>
 <span class="ln"></span>
-<span class="ln">    <span class="c">// 3. RAG multi-fuente + text-to-SQL</span></span>
-<span class="ln">    <span class="k">var</span> ctx = <span class="k">await</span> _rag.<span class="f">BuscarAsync</span>(p.Texto, top: <span class="n">4</span>);</span>
-<span class="ln">    <span class="k">var</span> sql = <span class="k">await</span> _kernel.<span class="f">InvokeAsync</span>(<span class="s">"SqlQuery"</span>, ctx);</span>
-<span class="ln">    _validador.<span class="f">ValidarAst</span>(sql);  <span class="c">// ScriptDom</span></span>
+<span class="ln">    <span class="k">public string</span>[] Superpowers =&gt;</span>
+<span class="ln">        [<span class="s">"Front-end &amp; UI/UX"</span>, <span class="s">"RAG + LLMs"</span>, <span class="s">"Offline-first"</span>];</span>
 <span class="ln"></span>
-<span class="ln">    <span class="k">return await</span> _llm.<span class="f">ResponderAsync</span>(ctx, sql);</span>
-<span class="ln">}</span></code></pre>
+<span class="ln">    <span class="k">public bool</span> OpenToWork =&gt; <span class="k">true</span>;  <span class="c">// ¡hablemos! · let's talk</span></span>
+<span class="ln">}</span>
+<span class="ln"></span>
+<span class="ln"><span class="k">var</span> me = <span class="k">new</span> <span class="t">Christopher</span>();</span>
+<span class="ln"><span class="k">await</span> me.<span class="f">BuildAsync</span>(coffee: <span class="t">double</span>.PositiveInfinity);</span></code></pre>
         <figcaption class="editor-foot mono">
-          <span><i class="ok"></i> 284 tests passed</span>
-          <span>C# · .NET 10 · Semantic Kernel</span>
+          <span><i class="ok"></i> Build succeeded · 0 errors</span>
+          <span>C# 13 · .NET 10</span>
         </figcaption>
       </figure>
     </div>
@@ -147,8 +149,53 @@
         <p class="sec-sub"><span lang="es">Los tres sistemas que sostienen la operación de Alvaco Enterprises, más un proyecto personal.</span><span lang="en">The three systems that run Alvaco Enterprises' operations, plus a personal project.</span></p>
       </header>
 
-      <!-- IAlvaco -->
+      <!-- AlvacoMovil -->
       <article class="project reveal">
+        <div class="project-text">
+          <div class="p-tags"><span class="tag tag-mobile"><span lang="es">Móvil</span><span lang="en">Mobile</span></span><span class="tag"><span lang="es">Co-líder · 100% front-end</span><span lang="en">Co-lead · 100% front-end</span></span></div>
+          <h3>AlvacoMovil</h3>
+          <p class="p-lead">
+            <span lang="es">App Android con la que <strong>~400 técnicos operan más de 15,000 equipos</strong> en México y Latinoamérica: recaudación, información de cada máquina, refacciones, reparaciones, rutas y auditorías.</span>
+            <span lang="en">Android app that <strong>~400 technicians use to run 15,000+ machines</strong> across Mexico and Latin America: cash collection, per-machine data, spare parts, repairs, routes and audits.</span>
+          </p>
+          <ul class="checks">
+            <li lang="es"><strong>Innovación:</strong> además de la recaudación financiera, cada visita captura y envía la información operativa de cada máquina de vending (estado, configuración, incidencias e historial).</li>
+            <li lang="en"><strong>Innovation:</strong> beyond financial collection, every visit captures and sends each vending machine's operational data (status, configuration, incidents and history).</li>
+            <li lang="es"><strong>Sistema de actualizaciones remotas desarrollado desde cero</strong>, sin publicar en Google Play: control de versiones y bloqueo de APKs desactualizadas para una seguridad interna estricta.</li>
+            <li lang="en"><strong>Remote update system built from scratch</strong>, no Google Play release: version control and blocking of outdated APKs for strict internal security.</li>
+            <li lang="es">~34 pantallas y sistema de diseño propio en .NET MAUI (MVVM).</li>
+            <li lang="en">~34 screens and a custom design system in .NET MAUI (MVVM).</li>
+            <li lang="es">Offline-first: 32 tablas SQLite, sincronización incremental y cola sin duplicados; API de 54 endpoints en Azure con JWT.</li>
+            <li lang="en">Offline-first: 32 SQLite tables, incremental sync and a duplicate-safe queue; 54-endpoint Azure API with JWT.</li>
+          </ul>
+          <p class="stack mono">.NET MAUI · MVVM · ASP.NET Core 9 · JWT · SQLite · Azure App Service · OTA updates · Google ML Kit</p>
+        </div>
+        <div class="project-visual visual-phone" aria-hidden="true">
+          <div class="phone">
+            <div class="notch"></div>
+            <div class="screen">
+              <div class="app-top"><span>Recaudación</span><span class="bt">● Sync</span></div>
+              <div class="app-card">
+                <p class="muted-sm">Peluchera · A-1042</p>
+                <p class="big">$ 4,280</p>
+                <div class="bar"><i style="--w:72%"></i></div>
+                <p class="muted-sm">72% de la meta semanal</p>
+              </div>
+              <div class="app-row"><span class="dot g"></span>Kiddie FGF2<b>$ 1,150</b></div>
+              <div class="app-row"><span class="dot y"></span>Videojuego<b>$ 860</b></div>
+              <div class="app-row"><span class="dot g"></span>Báscula<b>$ 312</b></div>
+              <div class="app-row"><span class="dot r"></span>Boxing<b>Sync…</b></div>
+              <div class="app-btn">Enviar reporte</div>
+              <div class="app-nav"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="float-chip chip-a">Offline ✓</div>
+          <div class="float-chip chip-b">OTA v3.1.1 ✓</div>
+        </div>
+      </article>
+
+      <!-- IAlvaco -->
+      <article class="project project-rev reveal">
         <div class="project-text">
           <div class="p-tags"><span class="tag tag-ai"><span lang="es">IA generativa</span><span lang="en">Generative AI</span></span><span class="tag"><span lang="es">Autor principal</span><span lang="en">Lead author</span></span></div>
           <h3>IAlvaco</h3>
@@ -201,51 +248,6 @@
               <rect x="525" y="196" width="120" height="48" rx="10"/><text x="585" y="218">Text-to-SQL</text><text x="585" y="234" class="sub">ERP · read-only</text>
             </g>
           </svg>
-        </div>
-      </article>
-
-      <!-- AlvacoMovil -->
-      <article class="project project-rev reveal">
-        <div class="project-text">
-          <div class="p-tags"><span class="tag tag-mobile"><span lang="es">Móvil</span><span lang="en">Mobile</span></span><span class="tag"><span lang="es">Co-líder · 100% front-end</span><span lang="en">Co-lead · 100% front-end</span></span></div>
-          <h3>AlvacoMovil</h3>
-          <p class="p-lead">
-            <span lang="es">App Android con la que <strong>~400 técnicos operan más de 15,000 equipos</strong> en México y Latinoamérica: recaudación, información de cada máquina, refacciones, reparaciones, rutas y auditorías.</span>
-            <span lang="en">Android app that <strong>~400 technicians use to run 15,000+ machines</strong> across Mexico and Latin America: cash collection, per-machine data, spare parts, repairs, routes and audits.</span>
-          </p>
-          <ul class="checks">
-            <li lang="es"><strong>Innovación:</strong> además de la recaudación financiera, cada visita captura y envía la información operativa de cada máquina de vending (estado, configuración, incidencias e historial).</li>
-            <li lang="en"><strong>Innovation:</strong> beyond financial collection, every visit captures and sends each vending machine's operational data (status, configuration, incidents and history).</li>
-            <li lang="es"><strong>Sistema de actualizaciones remotas desarrollado desde cero</strong>, sin publicar en Google Play: control de versiones y bloqueo de APKs desactualizadas para una seguridad interna estricta.</li>
-            <li lang="en"><strong>Remote update system built from scratch</strong>, no Google Play release: version control and blocking of outdated APKs for strict internal security.</li>
-            <li lang="es">~34 pantallas y sistema de diseño propio en .NET MAUI (MVVM).</li>
-            <li lang="en">~34 screens and a custom design system in .NET MAUI (MVVM).</li>
-            <li lang="es">Offline-first: 32 tablas SQLite, sincronización incremental y cola sin duplicados; API de 54 endpoints en Azure con JWT.</li>
-            <li lang="en">Offline-first: 32 SQLite tables, incremental sync and a duplicate-safe queue; 54-endpoint Azure API with JWT.</li>
-          </ul>
-          <p class="stack mono">.NET MAUI · MVVM · ASP.NET Core 9 · JWT · SQLite · Azure App Service · OTA updates · Google ML Kit</p>
-        </div>
-        <div class="project-visual visual-phone" aria-hidden="true">
-          <div class="phone">
-            <div class="notch"></div>
-            <div class="screen">
-              <div class="app-top"><span>Recaudación</span><span class="bt">● Sync</span></div>
-              <div class="app-card">
-                <p class="muted-sm">Peluchera · A-1042</p>
-                <p class="big">$ 4,280</p>
-                <div class="bar"><i style="--w:72%"></i></div>
-                <p class="muted-sm">72% de la meta semanal</p>
-              </div>
-              <div class="app-row"><span class="dot g"></span>Kiddie FGF2<b>$ 1,150</b></div>
-              <div class="app-row"><span class="dot y"></span>Videojuego<b>$ 860</b></div>
-              <div class="app-row"><span class="dot g"></span>Báscula<b>$ 312</b></div>
-              <div class="app-row"><span class="dot r"></span>Boxing<b>Sync…</b></div>
-              <div class="app-btn">Enviar reporte</div>
-              <div class="app-nav"><i class="on"></i><i></i><i></i><i></i></div>
-            </div>
-          </div>
-          <div class="float-chip chip-a">Offline ✓</div>
-          <div class="float-chip chip-b">OTA v3.1.1 ✓</div>
         </div>
       </article>
 

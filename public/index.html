@@ -1,382 +1,219 @@
 <!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="CV de Christopher Ivan Ortiz Villafanet, Ingeniero en Desarrollo de Software Interactivo. Experiencia en C#, .NET, Azure, SQL Server, Unity y desarrollo de aplicaciones de escritorio y moviles."
-    />
-    <meta
-      name="keywords"
-      content="ingeniero software, desarrollador C#, .NET, Azure, SQL Server, Unity, MAUI, frontend, backend, UX, portfolio"
-    />
-    <meta name="author" content="Christopher Ivan Ortiz Villafanet" />
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Christopher Ortiz Villafañet — .NET & AI Engineer</title>
+<meta name="description" content="Ingeniero de Software .NET especializado en IA aplicada (Azure OpenAI, RAG, Semantic Kernel) y desarrollo móvil con .NET MAUI.">
+<meta property="og:title" content="Christopher Ortiz Villafañet — .NET & AI Engineer">
+<meta property="og:description" content=".NET · Applied AI (LLMs / RAG) · Mobile (.NET MAUI)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    <meta property="og:title" content="Christopher Ivan Ortiz | Ingeniero en Software Interactivo" />
-    <meta
-      property="og:description"
-      content="Perfil profesional, experiencia, proyectos y contacto de Christopher Ivan Ortiz Villafanet, Ingeniero en Desarrollo de Software Interactivo."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://example.com" />
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="logo">CO<span>.</span></a>
+    <nav class="links">
+      <a href="#proyectos"><span lang="es">Proyectos</span><span lang="en">Projects</span></a>
+      <a href="#experiencia"><span lang="es">Experiencia</span><span lang="en">Experience</span></a>
+      <a href="#skills">Skills</a>
+      <a href="#contacto"><span lang="es">Contacto</span><span lang="en">Contact</span></a>
+    </nav>
+    <div class="nav-actions">
+      <button id="langBtn" class="chip" aria-label="Cambiar idioma / Switch language">EN</button>
+      <button id="themeBtn" class="chip" aria-label="Tema / Theme">◐</button>
+    </div>
+  </div>
+</header>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
+<main id="top">
 
-    <title>Christopher Ivan Ortiz | Ingeniero en Software Interactivo</title>
-  </head>
-  <body>
-    <header class="site-header" id="inicio">
-      <nav class="nav container" aria-label="Principal">
-        <a class="brand" href="#inicio">Christopher Ortiz</a>
+  <!-- HERO -->
+  <section class="hero wrap">
+    <p class="eyebrow mono">.NET · Azure · Generative AI · .NET MAUI</p>
+    <h1>Christopher Iván<br>Ortiz Villafañet</h1>
+    <p class="lead">
+      <span lang="es">Ingeniero de Software que construye sistemas empresariales completos: <strong>asistentes con IA generativa</strong>, <strong>apps móviles offline-first</strong> y <strong>plataformas web</strong> sobre .NET y Azure.</span>
+      <span lang="en">Software Engineer building complete enterprise systems: <strong>generative-AI assistants</strong>, <strong>offline-first mobile apps</strong> and <strong>web platforms</strong> on .NET and Azure.</span>
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="cv/Christopher-Ortiz-CV-ES.pdf" download lang="es">Descargar CV (ES)</a>
+      <a class="btn primary" href="cv/Christopher-Ortiz-Resume-EN.pdf" download lang="en">Download Resume (EN)</a>
+      <a class="btn" href="https://www.linkedin.com/in/christopher-villafa%C3%B1et/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/ChristopherOrtiz69" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <ul class="stats">
+      <li><b>15,000+</b><span lang="es">equipos en México y Latinoamérica operados con mi app</span><span lang="en">machines across Mexico &amp; LatAm run on my app</span></li>
+      <li><b>~400</b><span lang="es">técnicos en campo usando la app a diario</span><span lang="en">field technicians using the app daily</span></li>
+      <li><b>3</b><span lang="es">sistemas empresariales con front-end 100% propio</span><span lang="en">core systems with front-end built 100% by me</span></li>
+      <li><b>−71%</b><span lang="es">tokens por consulta en el asistente IA</span><span lang="en">tokens per query in the AI assistant</span></li>
+    </ul>
+  </section>
 
-        <button
-          class="menu-button"
-          id="menuButton"
-          type="button"
-          aria-expanded="false"
-          aria-controls="menu"
-        >
-          Menu
-        </button>
-        <ul class="menu" id="menu">
-          <li><a href="#perfil">Perfil</a></li>
-          <li><a href="#experiencia">Experiencia</a></li>
-          <li><a href="#educacion">Educacion</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>  
-      <section class="hero container reveal">
-        <p class="tag">Ingeniero en Desarrollo de Software Interactivo</p>
-        <h1>
-          Desarrollo experiencias digitales
-          <span>funcionales, intuitivas y centradas en el usuario.</span>
-        </h1>
-        <p class="hero-copy">
-          Ingeniero en Desarrollo de Software con experiencia en front y backend,
-          diseno de interfaces, integracion de bases de datos y desarrollo de
-          aplicaciones de escritorio y moviles. Apasionado de las TI y siempre
-          buscando fortalecer mis competencias tecnicas y crecer profesionalmente.
-        </p>
+  <!-- PROJECTS -->
+  <section id="proyectos" class="wrap section">
+    <h2><span lang="es">Proyectos destacados</span><span lang="en">Featured projects</span></h2>
 
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#contacto">Hablemos</a>
-          <a class="btn btn-ghost" href="mailto:chris-ivan06@hotmail.com">chris-ivan06@hotmail.com</a>
-        </div>
-
-        <div class="hero-highlights" aria-label="Resumen rapido">
-          <article>
-            <p class="value">3+</p>
-            <p class="label">anos de experiencia</p>
-          </article>
-          <article>
-            <p class="value">C1</p>
-            <p class="label">nivel de ingles</p>
-          </article>
-          <article>
-            <p class="value">3</p>
-            <p class="label">empresas con impacto real</p>
-          </article>
-        </div>
-      </section>
-    </header>
-
-    <main>
-      <section class="section container reveal" id="perfil">
-        <div class="section-heading">
-          <p class="kicker">Perfil profesional</p>
-          <h2>Desarrollo con criterio tecnico y vision de producto</h2>
-        </div>
-        <div class="grid profile-grid">
-          <article class="card">
-            <h3>Que aporto</h3>
-            <p>
-              Desarrollo de interfaces intuitivas y logica de negocio solida.
-              Me involucro en el ciclo completo: planeacion, implementacion,
-              pruebas y entrega, cuidando siempre la experiencia del usuario.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Como trabajo</h3>
-            <p>
-              Me adapto con rapidez a nuevos entornos y tecnologias. Soy proactivo,
-              comunicativo y disfruto colaborar en equipo orientandome siempre
-              a cumplir especificaciones y agregar valor real.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Tecnologias clave</h3>
-            <p>
-              C#, .NET, HTML, CSS, JavaScript, Python, SQL Server,
-              Entity Framework, Azure, Unity, Git, Visual Studio, VS Code.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section container reveal" id="experiencia">
-        <div class="section-heading">
-          <p class="kicker">Experiencia</p>
-          <h2>Trayectoria profesional</h2>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-item">
-            <p class="period">2024 – Actual</p>
-            <h3>Desarrollador de Software — Alvaco</h3>
-            <p>
-              Desarrollo de una aplicacion interna empresarial con ASP.NET Core y C#,
-              integrando bases de datos SQL Server mediante Entity Framework Core.
-              Responsable del diseno de modulos clave, optimizacion de consultas,
-              administracion de recursos en Azure y mantenimiento de un sistema
-              web legado desarrollado en PHP.
-            </p>
-            <ul>
-              <li>Diseno y desarrollo de modulos funcionales para la aplicacion interna de la empresa.</li>
-              <li>Consultas complejas en SQL Server: JOINs, subconsultas, CTEs y optimizacion con planes de ejecucion.</li>
-              <li>Acceso a datos con Entity Framework Core: migraciones, relaciones y consultas LINQ eficientes.</li>
-              <li>Administracion de recursos en Azure: base de datos, servicios y configuracion de entornos.</li>
-              <li>Desarrollo de APIs con ASP.NET Core consumidas por la aplicacion interna.</li>
-              <li>Mantenimiento y mejoras sobre sistema web legado en PHP desplegado en navegador.</li>
-            </ul>
-          </article>
-
-          <article class="timeline-item">
-            <p class="period">Feb 2023 – Ene 2024</p>
-            <h3>Desarrollador Junior — Grupo Difusion Cientifica</h3>
-            <p>
-              Participacion en el ciclo completo de desarrollo de una aplicacion de
-              escritorio: desde la planeacion hasta la entrega, con enfasis en
-              seguridad del contenido y experiencia de usuario.
-            </p>
-            <ul>
-              <li>Planeacion y diseno de arquitectura de la aplicacion de escritorio.</li>
-              <li>Implementacion de medidas de seguridad para proteger contenido privado.</li>
-              <li>Desarrollo de front y backend, diseno de interfaz orientado al usuario.</li>
-            </ul>
-          </article>
-
-          <article class="timeline-item">
-            <p class="period">May 2022 – Dic 2022</p>
-            <h3>Desarrollador de Interfaz de Usuario (Practicas) — Denedig S.A. de C.V.</h3>
-            <p>
-              Desarrollo de una aplicacion interactiva con tematica cultural nacional,
-              integrando diseno visual, logica de interaccion y conexion a base de datos.
-            </p>
-            <ul>
-              <li>Desarrollo de aplicacion interactiva con tematica cultural nacional.</li>
-              <li>Programacion de interfaces para una experiencia de usuario fluida e intuitiva.</li>
-              <li>Conexion a base de datos para mostrar marcadores y resultados en pantalla.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="section container reveal" id="educacion">
-        <div class="section-heading">
-          <p class="kicker">Educacion</p>
-          <h2>Formacion academica</h2>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item">
-            <p class="period">Junio 2025</p>
-            <h3>Ingeniero en Desarrollo de Software Interactivo</h3>
-            <p>Universidad AMERIKE — Ciudad de Mexico</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section container reveal" id="proyectos">
-        <div class="section-heading">
-          <p class="kicker">Proyectos destacados</p>
-          <h2>Resultados tangibles</h2>
-        </div>
-
-        <div class="grid projects-grid">
-          <article class="project-card">
-            <h3>Aplicacion de escritorio con seguridad</h3>
-            <p>
-              App de escritorio para Grupo Difusion Cientifica con proteccion de
-              contenido privado, gestion de accesos y diseno de interfaz enfocado
-              en facilitar el flujo de trabajo interno del equipo.
-            </p>
-            <p class="meta">C# | .NET | SQL Server | Visual Studio</p>
-          </article>
-
-          <article class="project-card">
-            <h3>App interactiva cultural</h3>
-            <p>
-              Aplicacion interactiva con tematica cultural nacional para Denedig:
-              interfaces animadas, experiencia de usuario fluida y conexion a base
-              de datos para el registro y visualizacion de marcadores en tiempo real.
-            </p>
-            <p class="meta">C# | SQL | UX | Pixel Art | Ilustracion Digital</p>
-          </article>
-
-          <article class="project-card">
-            <h3>Aplicacion interna empresarial — Alvaco</h3>
-            <p>
-              Aplicacion interna desarrollada con ASP.NET Core y C#. Diseno de modulos
-              funcionales, consultas optimizadas en SQL Server con Entity Framework Core
-              y administracion de recursos en Azure.
-            </p>
-            <p class="meta">C# | ASP.NET Core | SQL Server | Entity Framework | Azure | PHP</p>
-          </article>
-
-          <article class="project-card">
-            <h3>PetSafe — App movil de seguridad para mascotas</h3>
-            <p>
-              Proyecto personal inspirado en la experiencia en Alvaco. Aplicacion .NET MAUI
-              con API REST propia en Azure y base de datos Azure SQL. Los usuarios se
-              registran y dan de alta a sus mascotas; cada mascota genera un QR unico
-              que al escanearse abre una pagina web con los datos del perro y del dueno,
-              con boton para enviar la ubicacion al dueno via WhatsApp. Incluye
-              integracion con Google Maps para que veterinarias registren su clinica
-              y los usuarios encuentren atencion de emergencia cercana.
-            </p>
-            <p class="meta">C# | .NET MAUI | ASP.NET Core | Azure SQL | Azure App Service | Entity Framework | Google Maps API | QR | WhatsApp API</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section container reveal" id="habilidades">
-        <div class="section-heading">
-          <p class="kicker">Habilidades</p>
-          <h2>Stack tecnico y fortalezas</h2>
-        </div>
-
-        <div class="skills-layout">
-          <article class="card">
-            <h3>Lenguajes y frameworks</h3>
-            <p>C#, .NET, ASP.NET Core, PHP, HTML5, CSS3, JavaScript, Python, C++, .NET MAUI, POO.</p>
-          </article>
-          <article class="card">
-            <h3>Bases de datos</h3>
-            <p>
-              SQL Server, normalizacion relacional (1FN–3FN/BCNF), consultas optimizadas
-              (JOINs, CTEs, window functions), stored procedures, triggers, indices y
-              transacciones. Entity Framework Core: migraciones, LINQ eficiente, evitando N+1.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Cloud — Azure</h3>
-            <p>
-              Azure SQL Database, Azure App Service, configuracion de recursos cloud,
-              connection strings seguros y despliegues desde Visual Studio y GitHub Actions.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Herramientas y entornos</h3>
-            <p>Visual Studio, VS Code, Android Studio, GitHub, Git Bash, Unity, Blender, Inkscape, Illustrator.</p>
-          </article>
-          <article class="card">
-            <h3>Diseno y multimedia</h3>
-            <p>UX, diseno de interfaces, Pixel Art, Modelado 3D, VFX, Realidad Virtual, ilustracion digital.</p>
-          </article>
-          <article class="card">
-            <h3>IA y prompts</h3>
-            <p>
-              Uso productivo de GitHub Copilot y ChatGPT. Prompt engineering para
-              acelerar desarrollo, debugging y documentacion tecnica.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Idiomas y blandas</h3>
-            <p>Espanol nativo. Ingles C1 (avanzado). Trabajo en equipo, adaptabilidad, pensamiento critico y comunicacion efectiva.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section container reveal" id="contacto">
-        <div class="section-heading">
-          <p class="kicker">Contacto</p>
-          <h2>Conversemos sobre tu proximo reto</h2>
-        </div>
-
-        <div class="contact-layout">
-          <article class="contact-intro card">
-            <h3>Disponible para oportunidades</h3>
-            <p>
-              Si estas buscando un ingeniero de software con experiencia en C#, .NET,
-              Azure, SQL Server y desarrollo de interfaces, estare encantado de hablar.
-            </p>
-            <ul>
-              <li>Email: chris-ivan06@hotmail.com</li>
-              <li>Tel: +56 4981 3960</li>
-              <li>Ubicacion: Estado de Mexico, Mexico</li>
-              <li>LinkedIn: <a href="www.linkedin.com/in/christopher-villafañet" target="_blank" rel="noopener noreferrer">linkedin.com/in/christopher-villafanet</a></li>
-              <li>GitHub: <a href="https://github.com/ChristopherOrtiz69" target="_blank" rel="noopener noreferrer">github.com/ChristopherOrtiz69</a></li>
-            </ul>
-          </article>
-
-          <form
-            class="contact-form card"
-            id="contactForm"
-            data-endpoint="/api/contact"
-            data-fallback-email="chris-ivan06@hotmail.com"
-            novalidate
-          >
-            <div class="form-group">
-              <label for="name">Nombre</label>
-              <input id="name" name="name" type="text" autocomplete="name" required />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required />
-            </div>
-
-            <div class="form-group is-hidden">
-              <label for="company">Empresa (dejar vacio)</label>
-              <input id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
-            </div>
-
-            <div class="form-group">
-              <label for="message">Mensaje</label>
-              <textarea id="message" name="message" rows="6" required></textarea>
-            </div>
-
-            <button class="btn btn-primary" type="submit" id="submitButton">Enviar mensaje</button>
-            <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>Christopher Ivan Ortiz Villafanet — Ingeniero en Desarrollo de Software Interactivo</p>
-        <a href="#inicio">Volver arriba</a>
+    <article class="card feature">
+      <div class="card-head">
+        <h3>IAlvaco</h3>
+        <span class="tag ai"><span lang="es">IA generativa</span><span lang="en">Generative AI</span></span>
       </div>
-    </footer>
+      <p>
+        <span lang="es">Asistente corporativo que responde con <strong>RAG multi-fuente</strong> y consulta en vivo el ERP mediante <strong>text-to-SQL de solo lectura</strong>, respetando los permisos de cada departamento. Disponible en chat web, WhatsApp Business, el portal Alvaco360 y la app móvil.</span>
+        <span lang="en">Corporate assistant that answers with <strong>multi-source RAG</strong> and queries the live ERP through <strong>read-only text-to-SQL</strong>, scoped to each department's permissions. Available on web chat, WhatsApp Business, the Alvaco360 portal and the mobile app.</span>
+      </p>
+      <ul class="bullets">
+        <li lang="es">Seguridad de 5 capas para SQL generado por LLM, con validación sobre el AST (ScriptDom) y usuario de BD de mínimo privilegio.</li>
+        <li lang="en">5-layer security for LLM-generated SQL, with AST validation (ScriptDom) and a least-privilege DB user.</li>
+        <li lang="es">Hasta 71% menos tokens y respuestas repetidas en &lt;1 s con caché semántica y enrutamiento sin modelo.</li>
+        <li lang="en">Up to 71% fewer tokens and repeat answers in &lt;1 s via semantic caching and model-free routing.</li>
+        <li lang="es">Agente de mejora continua con aprobación humana y tablero de costos y uso.</li>
+        <li lang="en">Continuous-improvement agent with human approval, plus a cost and usage dashboard.</li>
+      </ul>
+      <p class="stack mono">.NET 10 · Semantic Kernel · Azure OpenAI GPT-4o · Embeddings · EF Core · SQL Server · Meta WhatsApp API · xUnit · GitHub Actions</p>
+    </article>
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Christopher Ivan Ortiz Villafanet",
-        "jobTitle": "Ingeniero en Desarrollo de Software Interactivo",
-        "email": "mailto:chris-ivan06@hotmail.com",
-        "telephone": "+5649813960",
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "Estado de Mexico",
-          "addressCountry": "MX"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/in/christopher-villafa%C3%B1et-04656b240/",
-          "https://github.com/ChristopherOrtiz69"
-        ]
-      }
-    </script>
-    <script src="./app.js" defer></script>
-  </body>
+    <div class="grid">
+      <article class="card">
+        <div class="card-head">
+          <h3>AlvacoMovil</h3>
+          <span class="tag mobile"><span lang="es">Móvil</span><span lang="en">Mobile</span></span>
+        </div>
+        <p>
+          <span lang="es">App Android con la que ~400 técnicos operan más de 15,000 equipos en México y Latinoamérica: recaudación por Bluetooth, refacciones, reparaciones, rutas y auditorías. Co-líder del proyecto y autor del 100% del front-end.</span>
+          <span lang="en">Android app that ~400 technicians use to run 15,000+ machines across Mexico and Latin America: Bluetooth cash collection, spare parts, repairs, routes and audits. Project co-lead and author of 100% of the front-end.</span>
+        </p>
+        <ul class="bullets">
+          <li lang="es">Offline-first: 32 tablas SQLite, sincronización incremental y cola sin duplicados.</li>
+          <li lang="en">Offline-first: 32 SQLite tables, incremental sync and a duplicate-safe queue.</li>
+          <li lang="es">API con 54 endpoints en Azure App Service y actualización automática del APK.</li>
+          <li lang="en">54-endpoint API on Azure App Service and automatic APK updates.</li>
+        </ul>
+        <p class="stack mono">.NET MAUI · MVVM · ASP.NET Core 9 · JWT · SQLite · BLE · ML Kit</p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3>Alvaco360</h3>
+          <span class="tag web">Web ERP</span>
+        </div>
+        <p>
+          <span lang="es">ERP web que unifica los sistemas internos (RRHH, operación, rutas, almacén y comercialización), usado por el corporativo en CDMX y las operaciones en México y Latinoamérica. Fundador del repositorio y líder de front-end en un equipo de 5.</span>
+          <span lang="en">Web ERP unifying internal systems (HR, operations, routes, warehouse and sales), used by Mexico City headquarters and operations across Mexico and Latin America. Repository founder and front-end lead in a team of 5.</span>
+        </p>
+        <ul class="bullets">
+          <li lang="es">SSO con Microsoft Entra ID y menú basado en permisos.</li>
+          <li lang="en">Microsoft Entra ID SSO and a permission-driven home screen.</li>
+          <li lang="es">Tablero nacional de estatus de equipos e integraciones con DHL, Estafeta, BioTime y Nayax.</li>
+          <li lang="en">National equipment-status dashboard and DHL, Estafeta, BioTime and Nayax integrations.</li>
+        </ul>
+        <p class="stack mono">ASP.NET MVC 5 · EF6 · Azure SQL · Bootstrap 5 · Chart.js</p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3>Pets</h3>
+          <span class="tag personal"><span lang="es">Personal</span><span lang="en">Personal</span></span>
+        </div>
+        <p>
+          <span lang="es">App para localizar mascotas perdidas: cada mascota tiene un QR único; al escanearlo, el dueño recibe por WhatsApp la ubicación de quien la encontró. Incluye mapa de veterinarias cercanas.</span>
+          <span lang="en">Lost-pet app: each pet has a unique QR code; when scanned, the owner gets the finder's location on WhatsApp. Includes a map of nearby vets.</span>
+        </p>
+        <p class="stack mono">.NET MAUI · Web API · Azure App Service · Azure SQL · WhatsApp API · Google Maps</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experiencia" class="wrap section">
+    <h2><span lang="es">Experiencia</span><span lang="en">Experience</span></h2>
+    <ol class="timeline">
+      <li>
+        <div class="when mono"><span lang="es">Ene 2026 — Actualidad</span><span lang="en">Jan 2026 — Present</span></div>
+        <div>
+          <h3>Alvaco Enterprises</h3>
+          <p class="role"><span lang="es">Desarrollador de Software Full-Stack (IA & Móvil)</span><span lang="en">Full-Stack Software Developer (AI & Mobile)</span></p>
+          <p>
+            <span lang="es">Autor principal de IAlvaco, co-líder de AlvacoMovil y líder de front-end de Alvaco360. Mantenimiento de sistemas PHP heredados durante la migración.</span>
+            <span lang="en">Lead author of IAlvaco, co-lead of AlvacoMovil and front-end lead of Alvaco360. Maintained legacy PHP systems during the migration.</span>
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="when mono"><span lang="es">Feb 2023 — Ene 2024</span><span lang="en">Feb 2023 — Jan 2024</span></div>
+        <div>
+          <h3>Grupo Difusión Científica</h3>
+          <p class="role"><span lang="es">Desarrollador Junior</span><span lang="en">Junior Developer</span></p>
+          <p>
+            <span lang="es">Aplicación de escritorio de punta a punta, incluido el diseño de la interfaz y la protección de contenido privado.</span>
+            <span lang="en">End-to-end desktop application, including UI design and protection of private content.</span>
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="when mono"><span lang="es">May 2022 — Dic 2022</span><span lang="en">May 2022 — Dec 2022</span></div>
+        <div>
+          <h3>Denedig S.A. de C.V.</h3>
+          <p class="role"><span lang="es">Desarrollador de Interfaz de Usuario (Prácticas)</span><span lang="en">UI Developer (Internship)</span></p>
+          <p>
+            <span lang="es">Interfaz de una aplicación interactiva de temática cultural y conexión a base de datos para un marcador web.</span>
+            <span lang="en">UI for an interactive cultural-themed app and a database-backed web scoreboard.</span>
+          </p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="wrap section">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><h4><span lang="es">IA generativa</span><span lang="en">Generative AI</span></h4><p>Azure OpenAI · Semantic Kernel · RAG · Embeddings · Function calling · Text-to-SQL · Semantic caching</p></div>
+      <div><h4>Backend</h4><p>C# · .NET 10/9 · ASP.NET Core · ASP.NET MVC · EF Core / EF6 · LINQ · JWT · OpenID Connect</p></div>
+      <div><h4><span lang="es">Móvil</span><span lang="en">Mobile</span></h4><p>.NET MAUI · MVVM · SQLite offline-first · Bluetooth · Google ML Kit</p></div>
+      <div><h4>Frontend</h4><p>HTML5 · CSS3 · JavaScript · Razor · Bootstrap 5 · Chart.js · UI/UX</p></div>
+      <div><h4><span lang="es">Datos</span><span lang="en">Data</span></h4><p>SQL Server · Azure SQL · T-SQL · Stored procedures</p></div>
+      <div><h4>Cloud & DevOps</h4><p>Azure App Service · Entra ID · GitHub Actions · Git · Docker · xUnit</p></div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="wrap section">
+    <h2><span lang="es">Educación e idiomas</span><span lang="en">Education & languages</span></h2>
+    <div class="edu">
+      <div class="card">
+        <h3><span lang="es">Ingeniería en Desarrollo de Software Interactivo</span><span lang="en">B.Eng. in Interactive Software Development</span></h3>
+        <p>Universidad AMERIKE · <span lang="es">Ciudad de México · 2025</span><span lang="en">Mexico City · 2025</span></p>
+      </div>
+      <div class="card">
+        <h3><span lang="es">Idiomas</span><span lang="en">Languages</span></h3>
+        <p><span lang="es">Español nativo · Inglés avanzado (C1)</span><span lang="en">Spanish (native) · English (advanced, C1)</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contacto" class="wrap section contact">
+    <h2><span lang="es">¿Hablamos?</span><span lang="en">Let's talk</span></h2>
+    <p class="lead">
+      <span lang="es">Abierto a oportunidades como .NET / AI Engineer y desarrollador móvil, presencial en CDMX/Edo. Méx. o remoto.</span>
+      <span lang="en">Open to .NET / AI Engineer and mobile developer roles, on-site in Mexico City area or remote.</span>
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:chris-ivan06@hotmail.com">chris-ivan06@hotmail.com</a>
+      <a class="btn" href="tel:+525549813960">+52 55 4981 3960</a>
+      <a class="btn" href="https://github.com/ChristopherAlvaco" target="_blank" rel="noopener">GitHub (Alvaco)</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap footer mono">© 2026 Christopher Iván Ortiz Villafañet</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
